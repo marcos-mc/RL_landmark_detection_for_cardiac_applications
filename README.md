@@ -67,6 +67,6 @@ optional arguments:
 ```
 ## Evaluation Results
 
-+ [Aorta Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/Evaluation/AORTA/AORTA_Eval_model.ipynb)
-+ [Left Atrial Appendage (LAA) Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/Evaluation/LAA/LAA_Eval_model.ipynb)
++ [Aorta Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/blob/master/Evaluation/AORTA/AORTA_Eval_model.ipynb)
++ [Left Atrial Appendage (LAA) Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/blob/master/Evaluation/AORTA/LAA_Eval_model.ipynb)
 
