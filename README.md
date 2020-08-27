@@ -6,7 +6,7 @@ The DQN code used is a version of the [RL-Medical](https://github.com/amiralansa
 
 ### Dependencies
 
-as specified in their [repository](https://github.com/amiralansary/rl-medical) specified requires:
+As specified in their [repository](https://github.com/amiralansary/rl-medical) specified requires:
 
 + Python=3.6
 + [tensorflow-gpu=1.14.0](https://pypi.org/project/tensorflow-gpu/)
@@ -24,7 +24,7 @@ as specified in their [repository](https://github.com/amiralansary/rl-medical) s
 
 ## DQN code
 
-The DQN code used is a version of the [RL-Medical](https://github.com/amiralansary/rl-medical/tree/master/examples/LandmarkDetection/SingleAgent) project.
+The DQN code used is a version of the [RL-Medical project](https://github.com/amiralansary/rl-medical/tree/master/examples/LandmarkDetection/SingleAgent) .
 
 ### Original Arguments
 ```
