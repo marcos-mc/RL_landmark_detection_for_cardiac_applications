@@ -60,9 +60,9 @@ optional arguments:
   
   --landmark            index of current landmark to be used
   --csv_name            name of the csv file to save the results
-  --viz					with a value different than 0 show images
-						of the agent actions while playing a game. 
-						Only for play and eval options.
+  --viz			with a value different than 0 show images
+			of the agent actions while playing a game. 
+			Only for play and eval options.
 
 ```
 ## Evaluation Results
