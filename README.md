@@ -19,8 +19,8 @@ As specified in their [repository](https://github.com/amiralansary/rl-medical) s
 
 ## Preprocessing
 
-+ [Aorta Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/Preprocessing/Aorta)
-+ [Left Atrial Appendage (LAA) Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/Preprocessing/LAA)
++ [Aorta Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/tree/master/Preprocessing/Aorta)
++ [Left Atrial Appendage (LAA) Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/tree/master/Preprocessing/LAA)
 
 ## DQN code
 
