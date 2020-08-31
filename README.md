@@ -4,7 +4,7 @@
 
 ### Dependencies
 
-As specified in their [repository](https://github.com/amiralansary/rl-medical) specified requires:
+As specified in their [repository](https://github.com/amiralansary/rl-medical), the code requires of the following dependencies:
 
 + Python=3.6
 + [tensorflow-gpu=1.14.0](https://pypi.org/project/tensorflow-gpu/)
