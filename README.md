@@ -1,5 +1,6 @@
 # Reinforcement Learning Landmark Detection Evaluation For CardiacApplications
 
+The DQN code used for this project is a modified version of the [RL-Medical project](https://github.com/amiralansary/rl-medical/tree/master/examples/LandmarkDetection/SingleAgent) .
 ## Installation
 
 ### Dependencies
@@ -22,7 +23,7 @@ As specified in their [repository](https://github.com/amiralansary/rl-medical), 
 
 ## DQN code
 
-The DQN code used is a version of the [RL-Medical project](https://github.com/amiralansary/rl-medical/tree/master/examples/LandmarkDetection/SingleAgent) .
+Original code: [RL-Medical project](https://github.com/amiralansary/rl-medical/tree/master/examples/LandmarkDetection/SingleAgent) .
 
 ### Original Arguments
 ```
