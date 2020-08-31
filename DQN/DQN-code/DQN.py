@@ -60,12 +60,13 @@ EVAL_EPISODE = 50
 ###############################################################################
 
 def get_player(directory=None, files_list= None, viz=False,
-               task='play', saveGif=False, saveVideo=False,landmark_ind = 0):
+               task='play', saveGif=False, saveVideo=False,landmark_ind = 0,rand_start = True):
     # in atari paper, max_num_frames = 30000
     env = MedicalPlayer(directory=directory, screen_dims=IMAGE_SIZE,
                         viz=viz, saveGif=saveGif, saveVideo=saveVideo,
                         task=task, files_list=files_list, max_num_frames=1500,
-                        landmark_index = landmark_ind)
+                        landmark_index = landmark_ind,rand_start = rand_start)
+    
     if (task != 'train'):
         # in training, env will be decorated by ExpReplay, and history
         # is taken care of in expreplay buffer
@@ -209,11 +210,13 @@ if __name__ == '__main__':
                         default=None)
     parser.add_argument('--viz', type=float, help='show images while playing. Only for play and eval',
                         default=None)
+    parser.add_argument('--not_randstart', action='store_false', help='random initial startint point or not',
+                        default=True)
     args = parser.parse_args()
 
     if args.gpu:
         os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
-
+    
     # check input files
     if args.task == 'play':
         error_message = """Wrong input files {} for {} task - should be 1 \'images.txt\' """.format(len(args.files), args.task)
@@ -249,7 +252,7 @@ if __name__ == '__main__':
             csv_info = play_n_episodes(get_player(files_list=args.files, viz=args.viz,
                                        saveGif=args.saveGif,
                                        saveVideo=args.saveVideo,
-                                       task='play',landmark_ind = args.landmark),
+                                       task='play',landmark_ind = args.landmark,rand_start = args.not_randstart),
                                        pred, num_files)
             if args.csv_name:
                 with open(csv_name, 'w') as outcsv:
@@ -263,7 +266,7 @@ if __name__ == '__main__':
             csv_info = play_n_episodes(get_player(files_list=args.files, viz= args.viz,
                                                   saveGif=args.saveGif,
                                        saveVideo=args.saveVideo,
-                                       task='eval',landmark_ind = args.landmark),
+                                       task='eval',landmark_ind = args.landmark,rand_start = args.not_randstart),
                                        pred, num_files)
             if args.csv_name:
                 with open(csv_name, 'w',newline='') as outcsv:

@@ -63,7 +63,7 @@ class MedicalPlayer(gym.Env):
 
     def __init__(self, directory=None, viz=False, task=False, files_list=None,
                  screen_dims=(27,27,27), history_length=20, multiscale=True,
-                 max_num_frames=0, saveGif=False, saveVideo=False,landmark_index = 0):
+                 max_num_frames=0, saveGif=False, saveVideo=False,landmark_index = 0,rand_start = True):
         """
         :param train_directory: environment or game name
         :param viz: visualization
@@ -102,7 +102,7 @@ class MedicalPlayer(gym.Env):
 
         # inits stat counters
         self.reset_stat()
-
+        self.rand_start = rand_start
         # counter to limit number of steps per episodes
         self.cnt = 0
         # maximum number of frames (steps) per episodes
@@ -266,7 +266,10 @@ class MedicalPlayer(gym.Env):
         #######################################################################
 
         self._location = (x, y, z)
-        self._start_location = (x, y, z)
+        if self.rand_start :
+            self._start_location = (x, y, z)
+        else:
+            self._start_location = (self._image_dims[0]//2,self._image_dims[1]//2,self._image_dims[2]//2)
         self._qvalues = [0, ] * self.actions
         self._screen = self._current_state()
 
@@ -435,7 +438,7 @@ class MedicalPlayer(gym.Env):
 
         info = {'score': self.current_episode_score.sum, 'gameOver': self.terminal,
                 'distError': distance_error, 'filename': self.filename,'loc':current_loc,
-                'target_loc': self._target_loc, 'spacing': self.spacing}
+                'target_loc': self._target_loc, 'spacing': self.spacing, 'start_pos':self._start_location}
 
         # #######################################################################
         # ## generate evaluation results from 19 different points

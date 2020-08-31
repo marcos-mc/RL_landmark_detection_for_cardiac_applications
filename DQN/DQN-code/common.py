@@ -51,8 +51,7 @@ def play_one_episode(env, func, render=False):
             env.render()
         sum_r += r
         if isOver:
-            return sum_r, info['filename'], info['distError'], info['loc'],info['target_loc'],info['spacing']
-
+            return sum_r, info['filename'], info['distError'], info['loc'],info['target_loc'],info['spacing'],info['start_pos']
 
 ###############################################################################
 
@@ -68,11 +67,11 @@ def play_n_episodes(player, predfunc, nr, render=False):
     for k in range(nr):
         # if k != 0:
         #     player.restart_episode()
-        score, filename, ditance_error, loc, target_loc, spacing = play_one_episode(player,
+        score, filename, ditance_error, loc, target_loc, spacing,start_pos = play_one_episode(player,
                                                                     predfunc,
                                                                     render=render)
         logger.info(
-            "{:04d}/{:04d} - {:>15} - score {:>5.2f} - distError {:>5.2f} - final_loc {} - target_loc{} - spacing {}".format(k + 1, nr, filename, score, ditance_error,
+            " Starting Position:{}\n{:04d}/{:04d} - {:>15} - score {:>5.2f} - distError {:>5.2f} - final_loc {} - target_loc{} - spacing {}".format(start_pos,k + 1, nr, filename, score, ditance_error,
                                                                         loc,target_loc,spacing))
         info_episodes.append([k + 1, filename, score, ditance_error,
                               loc[0],loc[1],loc[2],
