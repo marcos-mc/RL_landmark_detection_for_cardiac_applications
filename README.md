@@ -69,5 +69,5 @@ optional arguments:
 ## Evaluation Results
 
 + [Aorta Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/blob/master/Evaluation/AORTA/AORTA_Eval_model.ipynb)
-+ [LAA Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/blob/master/Evaluation/AORTA/LAA_Eval_model.ipynb)
++ [LAA Application](https://github.com/marcos-mc/RL_landmark_detection_for_cardiac_applications/blob/master/Evaluation/LAA/LAA_Eval_model.ipynb)
 
