@@ -1,0 +1,18 @@
+AORTA: 
+0,2,3 --> DuelingDouble / 1 --> Double
+
+0:
+ 
+python ./DQN_code/LAA/DQN-default/DQN.py --task eval --algo DuelingDouble --landmark 0 --gpu 0 --load data/models/RL_AORTA/SA_00/model-1250000 --files './aorta_test_data/filenames/AORTA_image_files_BLIND_TEST_NEW.txt' './aorta_test_data/filenames/AORTA_landmark_files_BLIND_TEST_NEW.txt' --csv_name 'STJ_new_test.csv' --not_randstart
+
+1:
+
+python ./DQN_code/LAA/DQN-6x6/DQN.py --task eval --algo Double --landmark 1 --gpu 0 --load data/models/RL_AORTA/6x6_EPS20_DOU_SA_01/model-1700000 --files './aorta_test_data/filenames/AORTA_image_files_BLIND_TEST_NEW.txt' './aorta_test_data/filenames/AORTA_landmark_files_BLIND_TEST_NEW.txt' --csv_name 'PAB_new_test.csv' --not_randstart
+
+2:
+
+python ./DQN_code/LAA/DQN-default/DQN.py --task eval --algo DuelingDouble --landmark 2 --gpu 0 --load data/models/RL_AORTA/SA_02/model-3150000 --files './aorta_test_data/filenames/AORTA_image_files_BLIND_TEST_NEW.txt' './aorta_test_data/filenames/AORTA_landmark_files_BLIND_TEST_NEW.txt' --csv_name '1st_SAV_new_test.csv' --not_randstart
+
+3:
+
+python ./DQN_code/LAA/DQN-default/DQN.py --task eval --algo DuelingDouble --landmark 3 --gpu 0 --load data/models/RL_AORTA/SA_03/model-3400000 --files './aorta_test_data/filenames/AORTA_image_files_BLIND_TEST_NEW.txt' './aorta_test_data/filenames/AORTA_landmark_files_BLIND_TEST_NEW.txt' --csv_name '3rd_SAV_new_test.csv' --not_randstart
