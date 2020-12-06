@@ -62,7 +62,7 @@ optional arguments:
   --viz			with a value different than 0 show images
 			of the agent actions while playing a game. 
 			Only for play and eval options.
-  --not-randstart	makes the initial starting point not random, placing 
+  --not_randstart	makes the initial starting point not random, placing 
 			it always in the center of the image.(Constant results)
 
 ```
